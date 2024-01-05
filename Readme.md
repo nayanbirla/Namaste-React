@@ -178,3 +178,55 @@ cost HeadingComponent = () =>(
 component inside component is component compostion
 
 JSX prevents malicious attack it prevents from cross site scripting attacks
+
+# Episode 4
+
+passing an argument to a function is same as passing a props
+
+config driven ui
+
+it is not recommended to use index as a key
+
+# Episode 5
+
+.js or .jsx in extension does not make difference
+
+There are two types of export/import named export and default export
+
+- it is recommended to use named export/import if we have multiple things to export
+
+# example
+
+export default Component;
+import Component from "path";
+
+- to import named export we use {}
+  example
+  export const Component
+  import { Component } from "../utils/con";
+
+can i use default export as a named import?
+
+# React Hooks
+
+- Normal js utility functions
+
+Two imp hooks
+
+- useState() => superpowerful state variable in react
+- useEffect()
+
+import {useState} from "React";
+so it is a named import
+
+whenever a state variable changes react re render the component
+
+# React Behind the Scene
+
+Reconciliation Algorithm (React Fiber) => in react 16
+
+virtual dom is a representation of actual dom.
+virtual dom is nothing but a js object
+Actual dom is tag <div> <div>
+
+diff algorithm => difference between old and new object

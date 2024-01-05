@@ -106,3 +106,75 @@ we can configure browser for out app in package.json
 ]
 
 there are multiple ways to do it explore browserlist website for that
+
+# Episode 3
+
+'npm start' is equivalent to 'npm run start'
+'npm run start' execute 'parcel index.html' behind the scene
+because we have configured it in out package.json
+
+_package.json_
+"scripts":{
+"start": "parcel index.html",
+"build": "parcel build index.html",
+"test": "jest"
+}
+
+- React.createElement is an object
+- when we render this object to DOM using ReactDOM then it becomes an HTML Element
+
+- root.render(----) replace the elements inside the root. it will not append it replace the elements
+
+_JSX_
+JavaScript Syntax
+
+- JSX is not a part of react. we can build application of react without JSX. But JSX makes developer life easy.
+
+- JSX is not HTML inside javascript
+- JSX is different then HTML
+- JSX is HTML like syntax or XML like syntax
+
+example code
+const jsxHeading = <h1 id="heading">Namaste React using JSX </h1>;
+
+above code is react element using JSX.
+
+JSX is not valid javascript
+
+so the question arise how jsx is working?
+the answer is simple parcle is doing the things for us.
+the code is transpiled before it goes to js engine.
+But parcel not directly convert it. But is uses Babel for transpiled the code.
+
+JSX is converted into React.createElement and the it makes js object to => HTMLElement(render)
+
+Babel convert JSX to react.creatElement
+
+Babel is a JavaScript Compiler
+
+to give tag to JSX we have to follow camel case
+Example: <h1 className="head">HY</h1>
+
+Explore more tags in JSX
+
+# React Component
+
+Two types of component
+
+1. Class based component - OLD types
+2. Function based component - NEW types
+
+React functional component is nothing but a normal js function which returns some JSX.
+
+# Component Composition
+
+cost HeadingComponent = () =>(
+
+<div id="container">
+<Title />
+<h1 className="heading">Namaste React Functional Component</h1>
+<div>
+);
+component inside component is component compostion
+
+JSX prevents malicious attack it prevents from cross site scripting attacks

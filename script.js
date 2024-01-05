@@ -1,23 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement(
-    "div",
-    { id: "child" },
-    React.createElement("h1", {}, "HEY I AM A HQ TAG")
-  )
-);
 
-console.log(parent);
+const Title = () => <h1 className="title">Namaste React</h1>;
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading1", xyz: "abc" },
-  "Hello World from React"
+const HeadingComponent = () => (
+  <div className="heading">
+    {Title()}
+    {1234 + 4321}
+    <h3>Kancha Chinna</h3>
+  </div>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(parent);
+root.render(<HeadingComponent />);

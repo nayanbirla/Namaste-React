@@ -1,10 +1,11 @@
-#This is episode 1
+# Episode 1
+
 Questions
 
 1. What is CDN
 2. What is Cross Origin
 
-#Episode 2
+# Episode 2
 
 git and github diff
 package.json is configuaration

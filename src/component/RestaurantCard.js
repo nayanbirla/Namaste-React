@@ -5,7 +5,7 @@ const RestaurantCard = ({ resdata }) => {
   return (
     <div className="res-card">
       <img className="res-logo" src={resdata.imageLink} alt="" />
-      {console.log(resdata)}
+
       <h3>{resdata.name}</h3>
       <h4>{resdata.cuisines}</h4>
       <h4>Rating: {resdata.rating}</h4>

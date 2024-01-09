@@ -1,22 +1,57 @@
 .header {
   display: flex;
   justify-content: space-between;
-  border: 1px solid black;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+}
+.logo-container {
+  flex: 1;
 }
 .logo {
-  width: 130px;
+  max-width: 100px;
+  height: auto;
+  border-radius: 40%;
 }
 .nav-items {
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
 }
 .nav-items > ul {
   display: flex;
-  list-style: none;
-  font-size: 24px;
+  list-style-type: none;
+  padding: 0;
+  gap: 20px;
+  /* font-size: 24px; */
 }
 .nav-items > ul > li {
-  padding: 10px;
-  margin: 10px;
+  /* padding: 10px;
+  margin: 10px; */
+  display: inline;
+  font-size: 18px;
+}
+.nav-items ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+.nav-items ul li a:hover {
+  background-color: #555;
+}
+.login {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.login:hover {
+  background-color: #777;
 }
 
 .search {
@@ -25,27 +60,264 @@
 .res-container {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+  /* justify-content: center; */
 }
 .res-card {
-  margin: 5px;
-  padding: 5px;
-  width: 15%;
-  background-color: #f0f0f0f0;
+  /* margin: 5px;
+  /* padding: 5px; */
+  /* width: 200px;
+  background-color: #f0f0f0f0; */
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+  text-align: center;
+  width: 240px; /* Set a fixed width for each card */
+  height: 350px; /* Set a fixed height for each card */
+  overflow: hidden; /* Hide overflow content */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px; /* Add margin for spacing between cards */
+  border-radius: 10px; /* Add border radius for rounded corners */
 }
 
 .res-card:hover {
-  border: 1px solid black;
-  cursor: pointer;
+  /* border: 1px solid black;
+  cursor: pointer; */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 .res-logo {
+  /* width: 100%;
+  height: 200px; */
   width: 100%;
-  height: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  flex: 1; /* Allow image to grow and fill the available space */
+  object-fit: cover;
+}
+.res-card h3 {
+  margin: 0;
+  font-size: 24px;
+  color: #333;
 }
 
-.filter {
+.res-card h4 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #666;
+}
+
+/* .filter {
   margin: 10px;
   background-color: black;
   color: white;
   font-weight: bold;
+} */
+.filter-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
+.input {
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  flex: 1;
+  transition: border-color 0.3s ease-in-out;
+  background-color: #f9f9f9; /* Added background color */
+  font-size: 16px; /* Increased font size for better visibility */
+}
+
+.input:focus {
+  border-color: #555;
+  outline: none;
+  background-color: #fff; /* Changed background color on focus */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Added box shadow for focus effect */
+}
+
+.filter {
+  background-color: #555;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.filter:hover {
+  background-color: #777;
+}
+
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.shimmer {
+  margin: 10px;
+  width: 200px;
+  height: 350px;
+  background-color: gray;
+}
+
+/* .login {
+  margin-top: 15px;
+  height: 40px;
+  width: 90px;
+  background-color: rgb(4, 58, 96);
+  border-radius: 10%;
+  color: white;
+  font-weight: bold;
+  font-size: large;
+} */
+
+/*menu header */
+.header1 {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.restaurant-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cuisines-rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cuisine {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.rating-value {
+  font-size: 20px;
+  margin-left: 5px;
+}
+
+.delivery-time {
+  font-size: 18px;
+}
+
+/*menu*/
+.menu-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dish {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dish:last-child {
+  border-bottom: none;
+}
+
+.dish-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.dish-type {
+  color: #666;
+  margin-top: 5px;
+}
+
+.dish-price {
+  font-weight: bold;
+  color: #4caf50;
+  font-size: 18px;
+}
+
+.dish-description {
+  color: #888;
+  margin-top: 5px;
+}
+
+/*Toggle switch*/
+/* Basic Toggle Switch Styling */
+
+/* Enhanced Toggle Switch Styling */
+
+/* Enhanced Toggle Switch Styling with Sliding Effect */
+
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  border-radius: 17px; /* Half of height for a more rounded appearance */
+  overflow: hidden; /* Ensures the inner components fit within the curved area */
+  background-color: #ccc;
+  transition: background-color 0.3s;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  background-color: white;
+  transition: transform 0.3s; /* Sliding transition */
+}
+
+input:checked + .slider {
+  transform: translateX(100%); /* Moved to the right for checked state */
+}
+
+/* Red color for Non Veg */
+.toggle-switch input:not(:checked) + .slider {
+  background-color: #ff5733;
+}
+
+/* Green color for Veg */
+input:checked + .slider {
+  background-color: #4caf50;
 }

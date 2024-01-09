@@ -231,3 +231,149 @@ virtual dom is nothing but a js object
 Actual dom is tag <div> <div>
 
 diff algorithm => difference between old and new object
+
+# Episode 6
+
+There are two ways to put data and render it
+
+1. Loads -> API -> Render
+2. Loads -> Render -> API -> Render
+
+in react we use 2nd way because it gives better user experience.
+
+what is optional chaining
+
+shimmer Ui
+
+Whenever state variable updates, react triggers a reconciliation cycle (re-render the component)
+
+# Episode 7
+
+# useEffect hooks
+
+- if no dependency array => useEffect is called on every render
+
+example
+useEffect(()=>{
+});
+
+- if dependency array is empty = [] => useEffect is called on initial render(just once)
+
+example
+useEffect(()=>{
+},[]);
+
+- if dependency array is [btnNameReact] => called everytime btnNameReact is updated
+
+example
+useEffect(()=>{
+},[btnNameReact]);
+
+# useState Hook
+
+- it is used to create local state variable inside your functional component
+
+# React Routing
+
+- we generally use createBrowserRouter to create routing path
+
+example
+const approuter = createBrowserRouter([
+{
+path: "/",
+element: <AppLayout />,
+errorElement: <Error />, // we can specify out own page for error
+},
+{
+path: "/about",
+element: <About />,
+},
+{
+path: "/contact",
+element: <Contact />,
+},
+]);
+
+Error page
+
+import React from "react";
+import { useRouteError } from "react-router-dom";
+const Error = () => {
+const error = useRouteError();
+return (
+<div>
+<h1>OOPs!</h1>
+<h3>{error.status}</h3>
+</div>
+);
+};
+export default Error;
+
+- in this we use a new hook which is useRouteError this have all the error which comes like to take status we print error.status
+
+- We use RouterProvider to put all our routing
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<RouterProvider router={approuter} />);
+
+- approuter have all path specified
+
+- read about outlet
+
+# Episode 8
+
+Class based component
+
+to make class based component we inherit our class with React.Component
+
+class About extends React.Component
+
+to use props we use constructor and we must write super(props) inside constructor
+
+Constructor(props){
+}
+
+to make state variable in class based components
+
+Constructor(){
+
+this.state={
+count:0,
+count2:2
+
+}
+
+to update the value of state variable we have a method called setState
+
+this.setState({
+count: this.state.count+1;
+})
+
+in class based component calling procedue is
+
+1. Constructor
+2. Render method
+3. componentDidMount
+
+ComponentDidMount is used for calling an API.
+
+it is used for calling api because it calls last after render.
+
+# refer react lifecycle diagram
+
+how react lifecycle works
+
+- parent class constructor
+- parent class render
+- first child constructor
+- first child render
+- second child constructor
+- second child render
+- first child component did mount
+- second child component did mount
+- parent component did mount
+
+Read About  
+Component did update
+Component will update
